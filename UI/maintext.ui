@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1155</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>动态电流分析仪校准软件</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#1e1d23;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;测试&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#1e1d23;
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="Engineering_configuration">
+       <attribute name="title">
+        <string>工程配置</string>
+       </attribute>
+       <widget class="QPushButton" name="begin">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+        </property>
+        <property name="text">
+         <string>开始</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="end">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>210</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+        </property>
+        <property name="text">
+         <string>关闭</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="instrument_configuration">
+       <attribute name="title">
+        <string>仪器配置</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="automated_test">
+       <attribute name="title">
+        <string>自动化测试</string>
+       </attribute>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>1091</width>
+          <height>631</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,6">
+         <item>
+          <widget class="QListWidget" name="listWidget">
+           <property name="styleSheet">
+            <string notr="true">background-color:#1e1d23;
+color: #a9b7c6;</string>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="flow">
+            <enum>QListView::TopToBottom</enum>
+           </property>
+           <property name="resizeMode">
+            <enum>QListView::Adjust</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>GPIB-USB(GPIB0)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LAN(TCPIP0)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>COM(ASRL 1)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>COM(ASRL 2)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>COM(ASRL 3)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>COM(ASRL 4)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>COM(ASRL 5)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>USB(USB 0)</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget">
+           <property name="styleSheet">
+            <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+           </property>
+           <widget class="QWidget" name="page">
+            <widget class="QProgressBar" name="progressBar">
+             <property name="geometry">
+              <rect>
+               <x>170</x>
+               <y>540</y>
+               <width>461</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>30</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>30</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>430</x>
+               <y>30</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_6">
+             <property name="geometry">
+              <rect>
+               <x>600</x>
+               <y>30</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_11">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>60</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Check</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_12">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>60</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_13">
+             <property name="geometry">
+              <rect>
+               <x>430</x>
+               <y>60</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Edit</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_14">
+             <property name="geometry">
+              <rect>
+               <x>600</x>
+               <y>60</y>
+               <width>54</width>
+               <height>12</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>ineractive</string>
+             </property>
+            </widget>
+            <widget class="QTextBrowser" name="textBrowser_2">
+             <property name="geometry">
+              <rect>
+               <x>150</x>
+               <y>120</y>
+               <width>491</width>
+               <height>341</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">selection-background-color:#007b55;
+	background-color:#1e1d23;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-width: 1px;
+	color: #a9b7c6;</string>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;我都无法&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_8">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="geometry">
+              <rect>
+               <x>250</x>
+               <y>160</y>
+               <width>75</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>第八</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>210</x>
+               <y>230</y>
+               <width>121</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>LAN(TCPIP0)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_5">
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>200</x>
+               <y>240</y>
+               <width>161</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>COM(ASRL 1)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_6">
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>310</y>
+               <width>351</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>COM(ASRL 2)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_7">
+            <widget class="QLabel" name="label_8">
+             <property name="geometry">
+              <rect>
+               <x>200</x>
+               <y>270</y>
+               <width>161</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>COM(ASRL 3)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <widget class="QLabel" name="label_9">
+             <property name="geometry">
+              <rect>
+               <x>280</x>
+               <y>220</y>
+               <width>221</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>COM(ASRL 4)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_3">
+            <widget class="QLabel" name="label_10">
+             <property name="geometry">
+              <rect>
+               <x>330</x>
+               <y>280</y>
+               <width>141</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>COM(ASRL 5)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_4">
+            <widget class="QLabel" name="label_15">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>290</y>
+               <width>181</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>USB(USB 0)</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>281</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="6,1,1">
+         <property name="rightMargin">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+           </property>
+           <property name="text">
+            <string>添加</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+           </property>
+           <property name="text">
+            <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>283</x>
+          <y>0</y>
+          <width>821</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3">
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="palette">
+            <palette>
+             <active>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="PlaceholderText">
+               <brush brushstyle="NoBrush">
+                <color alpha="128">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </active>
+             <inactive>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="PlaceholderText">
+               <brush brushstyle="NoBrush">
+                <color alpha="128">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </inactive>
+             <disabled>
+              <colorrole role="WindowText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Text">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>30</red>
+                 <green>29</green>
+                 <blue>35</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="PlaceholderText">
+               <brush brushstyle="NoBrush">
+                <color alpha="128">
+                 <red>169</red>
+                 <green>183</green>
+                 <blue>198</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </disabled>
+            </palette>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(220,220,220);
+border:1px solid rgb(102,139,139);
+
+background-color:#1e1d23;
+	color: #a9b7c6;</string>
+           </property>
+           <property name="text">
+            <string>Details for model</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="result_display">
+       <attribute name="title">
+        <string>结果展示</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="Generat_reports">
+       <attribute name="title">
+        <string>报表生成</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>160</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+        </property>
+        <property name="text">
+         <string>开始生成</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>270</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#1e1d23;
+	color: #a9b7c6;</string>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>scanning()</slot>
+  <slot>inquire()</slot>
+  <slot>disconnect_equipment()</slot>
+  <slot>test()</slot>
+  <slot>clear()</slot>
+  <slot>prepare_measurement()</slot>
+  <slot>prepare_calibration()</slot>
+  <slot>begin_calibration()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>动态电流分析仪校准软件</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;测试&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="widget">
+       <attribute name="title">
+        <string>工程配置</string>
+       </attribute>
+       <widget class="QPushButton" name="begin">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>开始</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="end">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>210</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>关闭</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>仪器配置</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>自动化测试</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>结果展示</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="">
+       <attribute name="title">
+        <string>报表生成</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>scanning()</slot>
+  <slot>inquire()</slot>
+  <slot>disconnect_equipment()</slot>
+  <slot>test()</slot>
+  <slot>clear()</slot>
+  <slot>prepare_measurement()</slot>
+  <slot>prepare_calibration()</slot>
+  <slot>begin_calibration()</slot>
+ </slots>
+</ui>
